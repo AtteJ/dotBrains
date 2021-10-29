@@ -53,9 +53,9 @@ class Species: Identifiable, ObservableObject {
     }
         
     func update(target: Vector) {
-        let halfDot = Float(self.dotSize) / 2.0;
-        let maxX = Float(self.maxWidth) - halfDot;
-        let maxY = Float(self.maxHeight) - halfDot;
+        let halfDot: Double = Double(self.dotSize) / 2.0
+        let maxX: Double = Double(self.maxWidth) - Double(halfDot)
+        let maxY: Double = Double(self.maxHeight) - Double(halfDot)
 
         if (self.dead || self.success) {
             return;
@@ -69,7 +69,7 @@ class Species: Identifiable, ObservableObject {
         self.move(direction)
         self.objectWillChange.send()
         
-        if (self.position.x.lessThan(halfDot) || self.position.x.greaterThan(maxX)) {
+        if (self.position.x.lessThan(Double(halfDot)) || self.position.x.greaterThan(maxX)) {
             self.dead = true
             return
         }
