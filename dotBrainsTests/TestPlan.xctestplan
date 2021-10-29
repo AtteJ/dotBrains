@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "662CD463-0F7E-4DFA-A8CB-AD2D8E9FC992",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:dotBrains.xcodeproj",
+        "identifier" : "DBE54EF5272B1E9100CEC642",
+        "name" : "dotBrainsTests"
+      }
+    }
+  ],
+  "version" : 1
+}
