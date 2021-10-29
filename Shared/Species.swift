@@ -20,13 +20,13 @@ class Species: Identifiable, ObservableObject {
     private var acceleration: Vector;
     private let maxWidth: Int;
     private let maxHeight: Int;
-    private let minTargetDistance: Float;
+    private let minTargetDistance: Double;
     private let dotSize: Int
         
-    init(width: Int, height: Int, dotSize: Int, minTargetDistance: Float, brain: Brain) {
+    init(width: Int, height: Int, dotSize: Int, minTargetDistance: Double, brain: Brain) {
         self.velocity = Vector(0, 0)
         self.acceleration = Vector(0, 0)
-        self.position = Vector(Float(width / 2), Float(height - 10))
+        self.position = Vector(Double(width / 2), Double(height - 10))
         self.dead = false
         self.success = false
         self.maxWidth = width
@@ -41,7 +41,7 @@ class Species: Identifiable, ObservableObject {
     init(copy: Species) {
         self.velocity = Vector(0, 0)
         self.acceleration = Vector(0, 0)
-        self.position = Vector(Float(copy.maxWidth / 2), Float(copy.maxHeight - 10))
+        self.position = Vector(Double(copy.maxWidth / 2), Double(copy.maxHeight - 10))
         self.dead = false
         self.success = false
         self.maxWidth = copy.maxWidth
@@ -69,34 +69,34 @@ class Species: Identifiable, ObservableObject {
         self.move(direction)
         self.objectWillChange.send()
         
-        if (self.position.x <= halfDot || self.position.x >= maxX) {
+        if (self.position.x.lessThan(halfDot) || self.position.x.greaterThan(maxX)) {
             self.dead = true
             return
         }
 
-        if (self.position.y <= halfDot || self.position.y >= maxY) {
+        if (self.position.y.lessThan(halfDot) || self.position.y.greaterThan(maxY)) {
             self.dead = true
             return
         }
 
-        let distance = self.position.nextDistance(target)
-        if (distance < minTargetDistance) {
+        let distance = self.position.Distance(target)
+        if ((round(distance * 1000) / 1000) < (round(minTargetDistance * 1000) / 1000)) {
             self.success = true
             return
         }
     }
         
-    func fitness(target: Vector) -> Float {
+    func fitness(target: Vector) -> Double {
         if (self.success) {
-            let size = Float(self.dotSize)
-            let step = Float(self.brain.step)
+            let size = Double(self.dotSize)
+            let step = Double(self.brain.step)
             let targetFitness = 1.0 / (size * size)
             let stepFitness = 10000.0 / (step * step)
             let fitness = targetFitness + stepFitness
 
             return fitness;
         } else {
-            let distance = self.position.nextDistance(target);
+            let distance = self.position.Distance(target);
             let fitness = 1.0 / (distance * distance);
 
             return fitness;

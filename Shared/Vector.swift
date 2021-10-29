@@ -62,10 +62,10 @@ class Vector: ObservableObject {
     }
     
     
-    func limit(_ max: Float) {
+    func limit(_ max: Double) {
         let magnitudeSquared = (self.x * self.x) + (self.y * self.y);
         let maxSquared = max * max;
-        if ((round(magnitudeSquared * 1000) / 1000) <= (round(maxSquared) * 1000) / 1000) {
+        if (magnitudeSquared.lessThan(maxSquared)) {
             return;
         }
     }

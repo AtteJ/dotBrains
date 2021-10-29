@@ -22,6 +22,8 @@
 		DBE54F02272B409D00CEC642 /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE54F00272B409D00CEC642 /* Species.swift */; };
 		DBE54F04272B440600CEC642 /* Population.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE54F03272B440600CEC642 /* Population.swift */; };
 		DBE54F05272B440600CEC642 /* Population.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE54F03272B440600CEC642 /* Population.swift */; };
+		DBE54F07272BE9AE00CEC642 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE54F06272BE9AD00CEC642 /* Double.swift */; };
+		DBE54F08272BE9AE00CEC642 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE54F06272BE9AD00CEC642 /* Double.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,7 @@
 		DBE54EFF272B306700CEC642 /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
 		DBE54F00272B409D00CEC642 /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
 		DBE54F03272B440600CEC642 /* Population.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Population.swift; sourceTree = "<group>"; };
+		DBE54F06272BE9AD00CEC642 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,7 @@
 				DBE54EEF272B195A00CEC642 /* Vector.swift */,
 				DBE54F00272B409D00CEC642 /* Species.swift */,
 				DBE54F03272B440600CEC642 /* Population.swift */,
+				DBE54F06272BE9AD00CEC642 /* Double.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -260,6 +264,7 @@
 				DBE54EF0272B195A00CEC642 /* Vector.swift in Sources */,
 				DBE54F01272B409D00CEC642 /* Species.swift in Sources */,
 				DBE54ED5272B163200CEC642 /* dotBrainsApp.swift in Sources */,
+				DBE54F07272BE9AE00CEC642 /* Double.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +278,7 @@
 				DBE54EF1272B195A00CEC642 /* Vector.swift in Sources */,
 				DBE54F02272B409D00CEC642 /* Species.swift in Sources */,
 				DBE54ED6272B163200CEC642 /* dotBrainsApp.swift in Sources */,
+				DBE54F08272BE9AE00CEC642 /* Double.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
